@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .background-image{
+            background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100px;
+            width: 100px;
+        }
+        .button {
+  background-color: hsla(12, 80%, 40%, 0.89);
+  border: none;
+  color: #e9eef7;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;   
+  margin: 1px 1px;
+  border-radius: 12px;
+  
+}
+button:hover {  
+  background-color: rgb(10, 3, 39);
+} 
+        
+    </style>
+</head>
+
+<body style="background-color: rgb(184, 162, 162)">
+    <button style="margin-left:200px;" class="button"><a  href="/"> Home</a></button>
+    <p style="font-size: 0.7cm; margin-left: 450px;  margin-top:40px; font-family: cursive;"> Search for your desired candidates</p><br><br>
+
+<div  style="margin-left: 500px;margin-top:5px;">
+    
+    <form action= "" method= "get"form-inline my-2 my-lg-0">
+        <input name="query" class="form-control mr-sm-2" type="search" placeholder="location/skills" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+</div>
+
+<div style="margin-left:450px; margin-top:70px;" >
+
+    {% for abc in data1 %}
+    
+ <b><p style="font-family:serif;" > Candidate</p></b>
+    <li>{{ abc.name}}</li>
+    <li>{{ abc.email }}</li>
+   <li> {{ abc.location }}</li>
+   <li> {{ abc.phone_number}}</li>
+   <li> {{abc.skills}}</li><br><br>
+{% endfor %}
+</div>
+
+</body>
+</html>
