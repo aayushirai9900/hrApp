@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,18 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <style>
-        .background-image {
-            background-image: url("https://cdn.pixabay.com/photo/2018/01/19/07/58/shaking-hands-3091908__340.jpg");
-            background-position: 100% 50%;
-            background-size: cover;
-            background-repeat: no-repeat;
-            height: 40vh; 
-            width: 100px;
-        }
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
+    <style> 
+       
+    
+   .bgi{
+        background-image: url("https://cdn.pixabay.com/photo/2018/01/19/07/58/shaking-hands-3091908__340.jpg");
+        height: 100vh;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        .bgi::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.65);
+}
+
+     
         .button {
-  background-color: hsla(249, 69%, 60%, 0.89);
+  background-color: rgba(192, 21, 15, 0.7);
   border: none;
   color: #0e0101;
   padding: 7px;
@@ -26,6 +43,7 @@
   font-size: 16px;
   margin: 1px 1px;
   border-radius: 12px;
+  background-blend-mode: luminosity;
   
 }
 button:hover {
@@ -34,10 +52,35 @@ button:hover {
 </style>
 </head>
 
-<body class="background-image">
-    
+<body class="bgi" >
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">
+            <b> Xcelero </b></a>
+        
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Clientele
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    <div >
      <div>
-        <p style="color:rgb(27, 8, 77); position:fixed; left:450px; top:0px; font-size: 2cm; ">Place where</p>
+        <p style="color:rgb(83, 126, 182); position:fixed; left:470px; top:30px; font-size: 2cm;font-family: Fantasy; font-variant: small-caps; ">Place where</p>
        <b> <p style="color: rgb(83, 126, 182);  position:fixed; left:270px; top:120px; font-size: 1.5cm;"><i>TALENT</i> meet <i>RECOGNITION</i></p></b>
      </div>
     
@@ -45,20 +88,21 @@ button:hover {
     <div style="position:fixed; left:190px; top:330px;">
         <b><p style="font-size:0.5cm ; color: rgb(196, 134, 43);font-family: cursive;">Create a profile to kickstart or boost </p></b>
         <b><p style="font-size: 0.5cm; color:rgb(196, 134,43);font-family: cursive;"> your career with millions of opportunities</p></b>
-        <h2 style="color:rgb(88, 59, 15); ;">JOB SEEKERS !!</h2>
+        <h2 style="color:rgb(207, 27, 27); ;">JOB SEEKERS !!</h2>
         <p style="font-size: 30px; color: rgb(196, 134,43);;">Enter the world of opportunities</p>
         <button class="button button1"><a href="/hr_app/" >click here </a></button>
     </div>
     <div style="position:fixed; left:900px; top:330px;">
         <b><p  style="font-size:0.5cm ; color: rgb(196, 134,43); font-family: cursive;">End your search for suitable</p></b>
         <b><p  style="font-size:0.5cm ; color: rgb(196, 134,43); font-family: cursive;">candidates with us</p></b>
-        <h2 style="color: rgb(88, 59, 15);" >EMPLOYERS !!</h2>
+        <h2 style="color: rgb(207, 27, 27);" >EMPLOYERS !!</h2>
         <p style="font-size: 30px; color: rgb(196, 134,43);">Search for suitable profile</p>
         <button class="button button1"> <a href="/hr_app/display"> click here</a></button>
     </div> 
         
 
     </div>
+</div>
 
 
     
